@@ -74,12 +74,12 @@ if (programFile) {
     if (fs.lstatSync(programFile).isDirectory()) {
         const sqlFiles = file_1.findByExtension(programFile, "sql");
         sqlFiles.forEach((sqlFile) => {
-            queries = reader_1.getQueryFromFile(sqlFile);
+            queries = reader_1.getQueryFromFile(sqlFile, program.verbose);
             runner.run(queries, printer, sqlFile, omittedErrors, db);
         });
     }
     else {
-        queries = reader_1.getQueryFromFile(programFile);
+        queries = reader_1.getQueryFromFile(programFile, program.verbose);
         prefix = programFile;
     }
 }
