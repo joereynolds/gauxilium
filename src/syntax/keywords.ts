@@ -25,7 +25,7 @@ export enum Keyword {
   Update = "update",
   Use = "use",
   Where = "where",
-
+  Comment = "comment",
   CommentHash = "#",
   CommentDash = "--",
   CommentMultiLineStart = "/*",
